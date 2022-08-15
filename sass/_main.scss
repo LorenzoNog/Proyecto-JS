@@ -1,0 +1,297 @@
+@import 'variables';
+
+main {
+    background-image: url(../img/textura.png);
+}
+/* Index */
+.mainIndex {
+    overflow-x: hidden;
+    background-image: url(../img/fondoIndex.png);
+}
+.containerIndex {
+    text-align: center;
+    .TextoIndex1, .TextoIndex2, .TextoIndex3{
+        margin-top: 10%;
+        font-family: 'bitter',sans-serif;
+        font-size: 50px;
+        color: #fff;
+        display: block;
+        white-space: nowrap;
+        border-right: 4px solid;
+        width: 100%;
+        animation: typing 1s steps(20), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+    .TextoIndex2{
+        margin-top: 0%;
+        animation: typing 3s steps(30), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+    .TextoIndex3{
+        margin-top: 0%;
+        animation: typing 5s steps(30), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+    .boton {
+        width: 0px;
+        height: 0px;
+        margin-bottom: 15.6%;
+        margin-right: 12%;
+        img {
+            width: 140px;
+            height: auto;
+        }
+    }
+}
+/* fin index */
+
+/* page 1 */
+main {
+    overflow-x: hidden;
+}
+.inicioPedido{
+    h1 {
+        text-align: center;
+        font-family: 'bitter',sans-serif;
+        margin-top: 5%;
+    }   
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: 'oswald',sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-left: 15%;
+        img {
+            border: 10px solid black;
+            border-radius: 50%;
+            width: 70%;
+            height: auto;
+            &:hover{
+                transition: all 0.2s;     
+                border-radius: 0%;       
+            }
+        }
+        p {
+            margin-left: 45%;
+        }
+    }
+}
+/* fin page 1 */
+
+/* page 2 */
+.containerPage2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+.containerPage2 .card {
+    width: 300px;
+    height: 500px;
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+    &:hover{
+        img {
+            transform: scale(1.25);
+        }
+        &::after{
+            height: 0px;
+        }
+    }
+    & img {
+        height: 100%;
+        z-index: 10;
+        transition: all 0.5s ease;
+    }
+    & .card-text {
+        z-index: 30;
+        position: absolute;
+        bottom: 0px;
+        padding-bottom: 10px;
+        & .categorias {
+            margin-bottom: 120%;
+            font-family: 'square peg',sans-serif;
+            text-transform: uppercase;
+            color: black;
+            font-weight: bolder;
+            text-align: center;
+        }
+        & button {
+            padding: 20px 30px;
+            width: 100%;
+            border-radius: 12px;
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            cursor: pointer;
+            transition: all .25s ease;
+            font-family: 'bebas neue',sans-serif;
+            font-size: 30px;
+            &:hover{
+                background: $color1;
+            }
+        }
+    }
+}
+/* fin page 2 */
+
+/* Page especiales, veggies, entradas */
+.containerFondo {
+    background-image: url(../img/background1.png);
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 3s ease;
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            filter: blur(20px);
+        }
+        10% {
+            opacity: 1;
+            filter: brightness(2) blur(10px)
+        }
+    }
+}
+.containerPizza, .containerPizzaVeggie, .containerPostre {
+    padding: 20px 60px;
+    margin-left: 3%;
+    .card {
+        box-shadow: 0px 0px 5px black;
+        .link {
+            text-decoration: none;
+            color: black;
+        }
+        .nombrePizza {
+            font-family: 'oswald',sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 0 1px 5px black;
+        }
+        .contenidoBottom {
+            font-weight: bolder;
+            display: flex;
+                flex-direction: row;
+            .aprobacion {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .flex {
+                margin-left: 60%;
+            }
+        }
+    }
+}
+/* fin */
+
+/* veggie */
+.containerPizzaVeggie {
+    margin-left: 33%;
+}
+/* fin veggie */
+
+/* formulario / contacto */
+.containerInput {
+    margin-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    h2 {
+        font-family: 'oswald',sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    form {
+        margin-top: 5%;
+        padding: 10px 40px;
+        .form-input{
+            input {
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid black;
+            }
+        }
+        .mensajeError {
+            color: tomato;
+            margin-top: 0px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+          }
+        .botonSubmit {
+            font-family: "oswald", sans-serif;
+            font-size: 15px;
+            margin-left: 35%;
+            margin-bottom: 20px;
+            input {
+                background-color: black;
+                color: white;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                border: none;
+            }
+        }
+    }
+}
+/* fin contacto */
+
+/* boton scroll */
+.scroll {
+    border: none;
+    padding: 10px 30px;
+    font-family: 'bebas neue',sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    background:#efefef;
+    border-radius: 50%;
+    color: grey;
+    i {
+        width: 30px;
+        color: tomato;
+    }
+}

@@ -1,0 +1,33 @@
+@import 'variables';
+
+footer {
+    overflow-x: hidden;
+    background-color: $color3;
+    .containerFooter {
+        padding: 30px 50px;
+        h4 {
+            font-family: 'square peg',sans-serif;
+            font-size: 50px;
+        }
+        p {
+            font-family: 'oswald',sans-serif;
+            font-size: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        i {
+            color: $color5;
+            margin:10px;
+            font-size: 30px;
+            &:hover {
+                transform: scale(1.2);
+                
+            }
+        }
+    }
+}
