@@ -219,13 +219,27 @@ main {
                 gap: 8px;
             }
             .flex {
-                margin-left: 60%;
+                margin-left: 25%;
+            }
+            .botonAgregarCarrito {
+                display: flex;
+                align-items: center;
+                margin-left: 30%;
+                button {
+                    border: 1px solid black;
+                    padding: 2px;
+                    color: tomato;
+                    i{
+                        &:hover{
+                            transform: rotate(360deg);
+                            transition: all 0.5s;
+                        }
+                    }
+                }
             }
         }
     }
 }
-/* fin */
-
 /* veggie */
 .containerPizzaVeggie {
     margin-left: 33%;
@@ -295,3 +309,5 @@ main {
         color: tomato;
     }
 }
+
+

@@ -267,10 +267,23 @@ main {
   gap: 8px;
 }
 .containerPizza .card .contenidoBottom .flex, .containerPizzaVeggie .card .contenidoBottom .flex, .containerPostre .card .contenidoBottom .flex {
-  margin-left: 60%;
+  margin-left: 25%;
+}
+.containerPizza .card .contenidoBottom .botonAgregarCarrito, .containerPizzaVeggie .card .contenidoBottom .botonAgregarCarrito, .containerPostre .card .contenidoBottom .botonAgregarCarrito {
+  display: flex;
+  align-items: center;
+  margin-left: 30%;
+}
+.containerPizza .card .contenidoBottom .botonAgregarCarrito button, .containerPizzaVeggie .card .contenidoBottom .botonAgregarCarrito button, .containerPostre .card .contenidoBottom .botonAgregarCarrito button {
+  border: 1px solid black;
+  padding: 2px;
+  color: tomato;
+}
+.containerPizza .card .contenidoBottom .botonAgregarCarrito button i:hover, .containerPizzaVeggie .card .contenidoBottom .botonAgregarCarrito button i:hover, .containerPostre .card .contenidoBottom .botonAgregarCarrito button i:hover {
+  transform: rotate(360deg);
+  transition: all 0.5s;
 }
 
-/* fin */
 /* veggie */
 .containerPizzaVeggie {
   margin-left: 33%;
