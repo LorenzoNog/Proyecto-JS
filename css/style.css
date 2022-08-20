@@ -154,70 +154,40 @@ main {
 }
 
 /* fin page 1 */
-/* page 2 */
-.containerPage2 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  margin-top: 5%;
-  margin-bottom: 20%;
+/* main */
+#contenedorProductos {
+  padding: 20px;
 }
-
-.containerPage2 .card {
-  width: 300px;
-  height: 500px;
-  border: none;
-  border-radius: 30px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s ease;
-  backface-visibility: hidden;
+#contenedorProductos .col-10 {
+  box-shadow: 0px 0px 5px black;
 }
-.containerPage2 .card:hover img {
-  transform: scale(1.25);
-}
-.containerPage2 .card:hover::after {
-  height: 0px;
-}
-.containerPage2 .card img {
-  height: 100%;
-  z-index: 10;
-  transition: all 0.5s ease;
-}
-.containerPage2 .card .card-text {
-  z-index: 30;
-  position: absolute;
-  bottom: 0px;
-  padding-bottom: 10px;
-}
-.containerPage2 .card .card-text .categorias {
-  margin-bottom: 120%;
-  font-family: "square peg", sans-serif;
+#contenedorProductos .NombreProducto {
+  font-family: "bitter", sans-serif;
   text-transform: uppercase;
-  color: black;
-  font-weight: bolder;
-  text-align: center;
-}
-.containerPage2 .card .card-text button {
-  padding: 20px 30px;
-  width: 100%;
-  border-radius: 12px;
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  font-family: "bebas neue", sans-serif;
+  font-style: italic;
   font-size: 30px;
+  color: #A20A0A;
+  width: 80%;
+  margin-left: 20px;
 }
-.containerPage2 .card .card-text button:hover {
-  background: #A20A0A;
+#contenedorProductos .descripcion {
+  font-family: "bebas neue", serif;
+  text-align: justify;
+  width: 80%;
+  margin-left: 20px;
+}
+#contenedorProductos .precio {
+  font-family: "bitter", sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  padding: 2px;
+}
+#contenedorProductos .btn {
+  margin-left: 25%;
+  color: #A20A0A;
 }
 
-/* fin page 2 */
+/*  */
 /* Page especiales, veggies, entradas */
 .containerFondo {
   background-image: url(../img/background1.png);
@@ -238,58 +208,6 @@ main {
   }
 }
 
-.containerPizza, .containerPizzaVeggie, .containerPostre {
-  padding: 20px 60px;
-  margin-left: 3%;
-}
-.containerPizza .card, .containerPizzaVeggie .card, .containerPostre .card {
-  box-shadow: 0px 0px 5px black;
-}
-.containerPizza .card .link, .containerPizzaVeggie .card .link, .containerPostre .card .link {
-  text-decoration: none;
-  color: black;
-}
-.containerPizza .card .nombrePizza, .containerPizzaVeggie .card .nombrePizza, .containerPostre .card .nombrePizza {
-  font-family: "oswald", sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: 0 1px 5px black;
-}
-.containerPizza .card .contenidoBottom, .containerPizzaVeggie .card .contenidoBottom, .containerPostre .card .contenidoBottom {
-  font-weight: bolder;
-  display: flex;
-  flex-direction: row;
-}
-.containerPizza .card .contenidoBottom .aprobacion, .containerPizzaVeggie .card .contenidoBottom .aprobacion, .containerPostre .card .contenidoBottom .aprobacion {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.containerPizza .card .contenidoBottom .flex, .containerPizzaVeggie .card .contenidoBottom .flex, .containerPostre .card .contenidoBottom .flex {
-  margin-left: 25%;
-}
-.containerPizza .card .contenidoBottom .botonAgregarCarrito, .containerPizzaVeggie .card .contenidoBottom .botonAgregarCarrito, .containerPostre .card .contenidoBottom .botonAgregarCarrito {
-  display: flex;
-  align-items: center;
-  margin-left: 30%;
-}
-.containerPizza .card .contenidoBottom .botonAgregarCarrito button, .containerPizzaVeggie .card .contenidoBottom .botonAgregarCarrito button, .containerPostre .card .contenidoBottom .botonAgregarCarrito button {
-  border: 1px solid black;
-  padding: 2px;
-  color: tomato;
-}
-.containerPizza .card .contenidoBottom .botonAgregarCarrito button i:hover, .containerPizzaVeggie .card .contenidoBottom .botonAgregarCarrito button i:hover, .containerPostre .card .contenidoBottom .botonAgregarCarrito button i:hover {
-  transform: rotate(360deg);
-  transition: all 0.5s;
-}
-
-/* veggie */
-.containerPizzaVeggie {
-  margin-left: 33%;
-}
-
-/* fin veggie */
 /* formulario / contacto */
 .containerInput {
   margin-top: 5%;

@@ -1,40 +1,175 @@
-let Pizzas = [
-    {id:1, nombre: 'pepperoni', precio:400},
-    {id:2, nombre: 'SoloQueso', precio:400},
-    {id:3, nombre: 'carneDetroit', precio:1200},
-    {id:4, nombre: 'hawaianaDetroit', precio:1000},
-    {id:5, nombre: 'ExtraQueso', precio:600},
-    {id:6, nombre: 'Carne', precio:600},
-    {id:7, nombre: 'Carnex5', precio:800},
-    {id:8, nombre: 'mixta', precio:500},
-    {id:9, nombre: 'suprema', precio:500},
-    {id:10, nombre: 'veggie', precio:500},
-    {id:11, nombre: 'veggieDetroit', precio:1000}
+let Especiales = [
+    {
+        id:1,
+        descripcion:'Pizza grande cubierta con más de 100 pepperonis y una corteza crujiente.',
+        nombre: 'Pepperoni',
+        precio:400, 
+        img:"../img/pepperoni.png"
+    },
+    {
+        id:2,
+        descripcion:'Pizza grande de masa delgada y cubierta con queso hasta el borde, imposible no tentarse.',
+        nombre: 'Only cheese', 
+        precio:400, 
+        img:"../img/queso.png"
+    },
+    {
+        id:3,
+        descripcion:'Pizza grande estilo Detroit con pepperoni, salchicha italiana y tocineta', 
+        nombre: 'Carne: Detroit style', 
+        precio:1200, 
+        img:"../img/detroit-carne.png"
+    },
+    {
+        id:4,
+        descripcion:'Pizza grande estilo Detroit con jamón ahumado y piña', 
+        nombre: 'Hawaiana: Detroit style', 
+        precio:1000, 
+        img:"../img/detroit-hawaiana.png"
+    },
+    {
+        id:5,
+        descripcion:'Pizza redonda grande con más queso que cualquier otra pizza que hayas probado.', 
+        nombre: 'Extra cheese', 
+        precio:600, 
+        img:"../img/extraqueso.png"
+    },
+    {
+        id:6,
+        descripcion:'Pizza redonda grande con base de salsa y queso italiano, arriba salchicha ', 
+        nombre: 'Italiana', 
+        precio:600, 
+        img:"../img/carne.png"
+    },
+    {
+        id:7,
+        descripcion:'Pizza redonda grande con tocino, salchicha italiana, jamón ahumado, pepperoni y carne de res sazonada', 
+        nombre: '5 carnes', 
+        precio:800, 
+        img:"../img/carnex5.png"
+    },
+    {
+        id:8,
+        descripcion:'Cuatro rebanadas de pizza de pepperoni combinadas con 8 rectangulos de queso', 
+        nombre: 'Mixta', 
+        precio:500, 
+        img:"../img/mixta.png"
+    },
+    {
+        id:9,
+        descripcion:'Pizza redonda grande con pepperoni, salchicha italiana, champiñones, cebollas y pimientos verdes', 
+        nombre: 'Supreme', 
+        precio:500, 
+        img:"../img/supreme.png"
+    }
 ]
 
-let EntradasYPostres = [
-    {id:12, nombre: 'Brownie1' , precio:400},
-    {id:13, nombre: 'Brownie2', precio:400},
-    {id:14, nombre: 'Combo', precio:500},
-    {id:15, nombre: 'panesAjo', precio:300},
-    {id:16, nombre: 'dedosQueso', precio:300},
-    {id:17, nombre: 'panQueso', precio:400},
-    {id:18, nombre: 'panQuesoPepperoni' , precio:500},
-    {id:19, nombre: 'alitasAjo', precio:600},
-    {id:20, nombre: 'alitasBBQ', precio:600}
+let Veganas = [
+    {
+        id:10,
+        descripcion:'Pizza redonda grande con pimientos verdes, cebollas, champiñones, aceitunas negras y condimento italiano', 
+        nombre: 'Veggie', 
+        precio:500, 
+        img:"../img/veggie.png"
+    },
+    {
+        id:11,
+        descripcion:'Pizza grande estilo Detroit con pimientos verdes, cebollas, champiñones y aceitunas negras',
+        nombre: 'Veggie: Detroit style', 
+        precio:1000, 
+        img:"../img/detroitveggie.png"
+    }
 ]
+
+let Entradas = [
+    {
+        id:14,
+        descripcion:'Ocho palitos de pan con sabor a mantequilla y ajo, luego espolvoreados con queso parmesano y servidos con Crazy Sauce®', 
+        nombre: 'Combo', 
+        precio:500, 
+        img:"../img/entrada1.png"
+    },
+    {
+        id:15,
+        descripcion:'Ocho palitos de pan con sabor a mantequilla y ajo, luego espolvoreados con queso parmesano', 
+        nombre: 'Panes de ajo', 
+        precio:300, 
+        img:"../img/entrada2.png"
+    },
+    {
+        id:16,
+        descripcion:'Tres piezas de unos dedos de queso irresistibles más Crazy Sauce®', 
+        nombre: 'Dedos de queso', 
+        precio:300, 
+        img:"../img/dedosdequeso.png"
+    },
+    {
+        id:17,
+        descripcion:'Diez piezas de pan recién horneado con un borde crujiente, cubierto con queso y cubierto con especias italianas', 
+        nombre: 'Pan de queso', 
+        precio:400, 
+        img:"../img/pandequeso.png"
+    },
+    {
+        id:18,
+        descripcion:'Diez piezas de pan recién horneado con borde crocante, cubiertas con queso, pepperoni y espolvoreadas con queso parmesano', 
+        nombre: 'Pan de queso y pepperoni' , 
+        precio:500, 
+        img:"../img/pandequeso2.png"
+    },
+    {
+        id:19,
+        descripcion:'Alitas asadas al horno con salsa cremosa de parmesano y ajo', 
+        nombre: 'Alitas de ajo', 
+        precio:600, 
+        img:"../img/alitas4.png"
+    },
+    {
+        id:20,
+        descripcion:'Alitas asadas al horno con una dulce salsa BBQ tradicional', 
+        nombre: 'Alitas BBQ', 
+        precio:600, 
+        img:"../img/alitas2.png"
+    }
+]
+
+const menu = [...Especiales,...Veganas,...Entradas];
+
+const Stock = [...menu];
 
 const GuardarStorage = (clave,valor) => {localStorage.setItem(clave,valor)};
 
-GuardarStorage( 'Pizzas', JSON.stringify(Pizzas));
-GuardarStorage( 'Entradas', JSON.stringify(EntradasYPostres));
+GuardarStorage( 'menu', JSON.stringify(Stock));
 
-function TraerDatos(){
-    let sabores = JSON.parse(localStorage.getItem("Pizzas"));
-    let Entradas = JSON.parse(localStorage.getItem("Entradas"));
+localStorage.removeItem('pedido');
 
-    console.log(sabores);
-    console.log(Entradas);
-}
+const contenedorProductos = document.getElementById("contenedorProductos");
 
-TraerDatos();
+/* productos */
+menu.forEach((producto) => {
+    const div = document.createElement('div');
+    div.classList.add('col-9','border','bg-white', 'rounded', 'mt-5', 'd-flex', 'align-items-center', 'producto');
+    div.innerHTML = `
+            <div class="w-20">
+                <img src=${producto.img} alt="pepperoni" width="250" height="200">
+            </div>     
+            <div class="d-flex flex-column">
+                <h3 class="NombreProducto">
+                    ${producto.nombre}
+                </h3>
+                <p class="descripcion">
+                    ${producto.descripcion}
+                </p>
+            </div>
+            <div class="d-flex align-items-center justify-content-end flex-column">
+                <p class="precio">
+                    $${producto.precio}
+                </p>
+                <button class="btn" id="${producto.id}">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+    `
+    contenedorProductos.appendChild(div);
+})
+/*  */
