@@ -1,0 +1,72 @@
+
+
+.mainIndex {
+    overflow-x: hidden;
+    background-image: url(../img/fondoIndex.png);
+}
+.containerIndex {
+    text-align: center;
+    .TextoIndex1, .TextoIndex2, .TextoIndex3{
+        margin-top: 10%;
+        font-family: 'bitter',sans-serif;
+        font-size: 50px;
+        color: #fff;
+        display: block;
+        white-space: nowrap;
+        border-right: 4px solid;
+        width: 100%;
+        animation: typing 1s steps(20), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+    .TextoIndex2{
+        margin-top: 0%;
+        animation: typing 3s steps(30), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+    .TextoIndex3{
+        margin-top: 0%;
+        animation: typing 5s steps(30), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+    .boton {
+        width: 0px;
+        height: 0px;
+        margin-bottom: 15.6%;
+        margin-right: 12%;
+        img {
+            width: 140px;
+            height: auto;
+        }
+    }
+}
+/* fin index */

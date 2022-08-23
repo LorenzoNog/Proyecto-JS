@@ -1,54 +1,9 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Header */
-nav {
-  background-color: #A10035;
-  box-shadow: 0px 0px 15px black;
-}
-nav .container-fluid {
-  max-width: 95%;
-}
-nav .container-fluid a {
-  text-decoration: none;
-  color: #F6EEC9;
-  font-family: "square peg", sans-serif;
-  font-size: 50px;
-}
-nav .container-fluid a :hover {
-  display: black;
-}
-nav .container-fluid .navbar-toggler {
-  font-size: 20px;
-}
-nav .container-fluid .collapse a {
-  font-family: "square peg", sans-serif;
-  position: absolute;
-  top: 25%;
-  left: 82%;
-}
-nav .container-fluid .collapse .nav-item a {
-  color: #F6EEC9;
-}
-nav .container-fluid .carrito {
-  position: absolute;
-  height: 20px;
-  top: 40%;
-  left: 90%;
-}
-nav .container-fluid .carrito i {
-  color: #F6EEC9;
-  font-size: 30px;
-}
-
-main {
-  background-image: url(../img/textura.png);
-}
-
-/* Index */
 .mainIndex {
   overflow-x: hidden;
   background-image: url(../img/fondoIndex.png);
@@ -121,6 +76,135 @@ main {
 }
 
 /* fin index */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.3);
+  background-color: #A10035;
+}
+header h1 {
+  color: #F6EEC9;
+  font-weight: 700;
+  font-size: 70px;
+  font-family: "square peg", sans-serif;
+}
+header #boton-carrito {
+  border: none;
+  color: #F6EEC9;
+  font-size: 30px;
+  background: transparent;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+header #boton-carrito:hover {
+  cursor: pointer;
+  color: black;
+}
+
+body {
+  background-image: url(../img/textura.png);
+}
+
+.NombreProducto {
+  font-family: "bitter", sans-serif;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+.descripcion {
+  font-family: "bebas neue", serif;
+  width: 60%;
+  margin-left: 5px;
+}
+
+.precioProducto {
+  font-family: "bitter", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-right: 5px;
+  padding-top: 10px;
+}
+
+.boton-agregar {
+  background: transparent;
+  color: tomato;
+  font-size: 18px;
+  border: none;
+}
+.boton-agregar:hover {
+  color: black;
+}
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all 0.5s;
+  margin-top: 0;
+}
+.modal-carrito h3 {
+  color: #A10035;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  font-family: "bitter", sans-serif;
+}
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #A10035;
+  border: none;
+  background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.productoEnCarrito:hover {
+  border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+/*  */
 /* page 1 */
 main {
   overflow-x: hidden;
@@ -153,42 +237,7 @@ main {
   margin-left: 45%;
 }
 
-/* fin page 1 */
-/* main */
-#contenedorProductos {
-  padding: 20px;
-}
-#contenedorProductos .col-10 {
-  box-shadow: 0px 0px 5px black;
-}
-#contenedorProductos .NombreProducto {
-  font-family: "bitter", sans-serif;
-  text-transform: uppercase;
-  font-style: italic;
-  font-size: 30px;
-  color: #A20A0A;
-  width: 80%;
-  margin-left: 20px;
-}
-#contenedorProductos .descripcion {
-  font-family: "bebas neue", serif;
-  text-align: justify;
-  width: 80%;
-  margin-left: 20px;
-}
-#contenedorProductos .precio {
-  font-family: "bitter", sans-serif;
-  font-weight: bolder;
-  font-size: 30px;
-  padding: 2px;
-}
-#contenedorProductos .btn {
-  margin-left: 25%;
-  color: #A20A0A;
-}
-
 /*  */
-/* Page especiales, veggies, entradas */
 .containerFondo {
   background-image: url(../img/background1.png);
   height: 110vh;
@@ -208,52 +257,7 @@ main {
   }
 }
 
-/* formulario / contacto */
-.containerInput {
-  margin-top: 5%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-.containerInput h2 {
-  font-family: "oswald", sans-serif;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.containerInput form {
-  margin-top: 5%;
-  padding: 10px 40px;
-}
-.containerInput form .form-input input {
-  margin-bottom: 30px;
-  border: none;
-  outline: none;
-  background: none;
-  border-bottom: 1px solid black;
-}
-.containerInput form .mensajeError {
-  color: tomato;
-  margin-top: 0px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-.containerInput form .botonSubmit {
-  font-family: "oswald", sans-serif;
-  font-size: 15px;
-  margin-left: 35%;
-  margin-bottom: 20px;
-}
-.containerInput form .botonSubmit input {
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  border: none;
-}
-
-/* fin contacto */
+/*  */
 /* boton scroll */
 .scroll {
   border: none;
@@ -299,4 +303,48 @@ footer .containerFooter i {
 }
 footer .containerFooter i:hover {
   transform: scale(1.2);
+}
+
+.containerInput {
+  margin-top: 5%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.containerInput h2 {
+  font-family: "oswald", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.containerInput form {
+  margin-top: 5%;
+  padding: 10px 40px;
+}
+.containerInput form .form-input input {
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid black;
+}
+.containerInput form .mensajeError {
+  color: tomato;
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.containerInput form .botonSubmit {
+  font-family: "oswald", sans-serif;
+  font-size: 15px;
+  margin-left: 35%;
+  margin-bottom: 20px;
+}
+.containerInput form .botonSubmit input {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: none;
 }

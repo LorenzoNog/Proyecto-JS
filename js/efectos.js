@@ -25,19 +25,6 @@ let retiro = document.getElementsByClassName('seleccionar');
     })
 }
 
-/* efecto hover tarjetas */
-let card = document.getElementsByClassName('card');
-
-    for(let i = 0; i < card.length; i++){
-    card[i].addEventListener('mouseover', () => {
-        card[i].style.transform = "scale(1.1)";
-    })
-
-    card[i].addEventListener('mouseout', () => {
-        card[i].style.transform = "scale(1)";
-    })
-}
-
 /* scroll */
 
 btn = document.getElementById("botonScroll")
