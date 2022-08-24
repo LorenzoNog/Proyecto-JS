@@ -15,6 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 botonVaciar.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Estás seguro de vaciar el carrito?',
+        icon: 'warning',
+        showCancelButton: true,
+        showConfirmButton: true,
+        confirmButtonColor: 'blue',
+        cancelButtonColor: 'red',
+        confirmButtonText: 'Si, vacíalo!',
+        cancelButtonText: 'Cancelar',
+        allowEnterKey: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Vaciado!',
+            'Tu pedido ha sido eliminado.',
+            'success'
+          )
+        }
+      })
     carrito.length = 0
     actualizarCarrito()
 })
@@ -43,10 +62,21 @@ menu.forEach((producto) => {
         </div>
     
     `
-    contenedorProductos.appendChild(div)
-    const boton = document.getElementById(`agregar${producto.id}`)
+    contenedorProductos.appendChild(div);
+    
+    const boton = document.getElementById(`agregar${producto.id}`);
+
     boton.addEventListener('click', () => {
         agregarAlCarrito(producto.id)
+        Toastify ({
+            text: 'Se agregó el producto',
+            duration: 2000,
+            gravity: 'bottom',
+            position: 'right',
+            style: {
+                background: '#A10035'
+            }
+        }).showToast();
     })
 })
 
@@ -69,11 +99,11 @@ const agregarAlCarrito = (prodId) => {
 }
 
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId)
-    const indice = carrito.indexOf(item) 
-    carrito.splice(indice, 1) 
-    actualizarCarrito() 
-    console.log(carrito)
+    const item = carrito.find((prod) => prod.id === prodId);
+    const indice = carrito.indexOf(item); 
+    carrito.splice(indice, 1);
+    actualizarCarrito(); 
+    console.log(carrito);
 }
 
 const actualizarCarrito = () => {
