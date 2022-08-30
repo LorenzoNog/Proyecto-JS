@@ -45,6 +45,7 @@ botonVaciar.addEventListener('click', () => {
         }
       })
     carrito.length = 0
+    localStorage.removeItem('carrito');
     actualizarCarrito()
 })
 
