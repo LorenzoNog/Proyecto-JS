@@ -8,7 +8,7 @@ const cantidadTotal = document.getElementById('cantidadTotal')
 
 let carrito = [];
 
-fetch('/producto.json')
+fetch('../producto.json')
 .then(respuesta => respuesta.json())
 .then((resultado)=>{
 
