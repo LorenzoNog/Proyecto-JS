@@ -33,16 +33,4 @@ function scrollear(){
 
 }
 
-// Animacion tarjeta 
-
-tarjeta.addEventListener('click', () => {
-	tarjeta.style.transform = 'rotateY(360deg)'
-});
-
-// boton abrir form
-
-botonAbrirForm.addEventListener('click',()=>{
-    botonAbrirForm.style.transform = 'rotate(360deg)';
-    formPago.style.clipPath = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
-})
 
