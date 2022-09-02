@@ -1,0 +1,224 @@
+@import 'variables';
+
+// formulario de contacto
+
+.containerInput {
+    margin-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    h2 {
+        font-family: 'oswald',sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    form {
+        margin-top: 5%;
+        padding: 10px 40px;
+        .form-input{
+            input {
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid black;
+            }
+        }
+        .mensajeError {
+            color: tomato;
+            margin-top: 0px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+          }
+        .botonSubmit {
+            font-family: "oswald", sans-serif;
+            font-size: 15px;
+            margin-left: 35%;
+            margin-bottom: 20px;
+            input {
+                background-color: black;
+                color: white;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                border: none;
+            }
+        }
+    }
+}
+
+// formulario datos para pago
+
+.FormDatos{
+    width: 80%;
+    padding: 150px 30px 30px 30px;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+    top: -130px;
+    z-index: 1;
+    background-color: #efefef;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+    label {
+        font-family: 'oswald',sans-serif;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+        color: grey;
+    }
+    input, select, .btnPagar{
+        margin-bottom: 5px;
+        border: none;
+        border-bottom: 2px solid #ced6e0;
+        font-size: 15px;
+        height: 40px;
+        width: 100%;
+        transition: 0.3s ease all;
+        border-radius: 5px;
+    }
+    .flexbox{
+        display:flex ;
+        flex-direction: row;
+        justify-content: space-between;
+        .select {
+            width: 100%;
+            margin-right: 15px;
+            select {
+                -webkit-appearance: none;
+            }
+            i{
+                position: relative;
+                color: #CED6E0;
+                top: -38px;
+                right: -215px;
+                transition: .3s ease all;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+        .expiracion {
+            width: 100%;
+        }
+        .ccv {
+            min-width: 100px;
+        }
+    }
+    .btnPagar {
+        font-size: 20px;
+        font-family: 'oswald',sans-serif;
+        color: black;
+        text-transform: uppercase;
+    }
+}
+
+
+// formulario de pago con tarjeta
+
+.contenedorTarjeta{
+    width: 90%;
+	max-width: 1000px;
+	padding: 40px 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    .tarjeta{
+        width: 100%;
+	    max-width: 550px;
+	    position: relative;
+	    transition: .3s ease all;
+	    cursor: pointer;
+	    z-index: 2;
+        .delantera {
+            padding: 30px;
+	        border-radius: 15px;
+	        box-shadow: 0 10px 10px 0 black;
+            min-height: 345px;
+            width: 100%;
+	        background: url(../img/spiderman.png);
+	        background-size: cover;
+        }
+    }
+    .botonAbrirForm{
+        i {
+            font-size: 30px;
+            color: white;
+        }
+        border-radius: 90%;
+        border: none;
+        padding: 12px;
+        background-color: $color1;
+        position: relative;
+        top: -25px;
+        z-index: 3;
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+    /* formulario pago */
+    .FormPago{
+        width: 80%;
+        padding: 150px 30px 30px 30px;
+        max-width: 700px;
+        border-radius: 10px;
+        position: relative;
+        top: -145px;
+        z-index: 1;
+        background-color: #efefef;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	    transition: clip-path .3s ease-out;
+        label {
+            font-family: 'oswald',sans-serif;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 10px;
+            color: grey;
+        }
+        input, select, .btnPagar{
+            margin-bottom: 5px;
+            border: none;
+            border-bottom: 2px solid #ced6e0;
+            font-size: 15px;
+            height: 40px;
+            width: 100%;
+            transition: 0.3s ease all;
+            border-radius: 5px;
+        }
+        .flexbox{
+            display:flex ;
+            flex-direction: row;
+            justify-content: space-between;
+            .select {
+                width: 100%;
+                margin-right: 15px;
+                select {
+                    -webkit-appearance: none;
+                }
+                i{
+                    position: relative;
+	                color: #CED6E0;
+	                top: -38px;
+	                right: -215px;
+	                transition: .3s ease all;
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+            .expiracion {
+                width: 100%;
+            }
+            .ccv {
+                min-width: 100px;
+            }
+        }
+        .btnPagar {
+            font-size: 20px;
+            font-family: 'oswald',sans-serif;
+            color: black;
+            text-transform: uppercase;
+        }
+    }
+}

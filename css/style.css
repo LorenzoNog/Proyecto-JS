@@ -127,14 +127,19 @@ body {
   padding-top: 10px;
 }
 
-.boton-agregar {
+.boton-agregar, .boton-pagar {
+  text-transform: uppercase;
   background: transparent;
   color: tomato;
   font-size: 18px;
   border: none;
 }
-.boton-agregar:hover {
+.boton-agregar:hover, .boton-pagar:hover {
   color: black;
+}
+
+.boton-pagar {
+  margin-left: 55%;
 }
 
 .modal-contenedor {
@@ -347,4 +352,174 @@ footer .containerFooter i:hover {
   text-transform: uppercase;
   padding: 5px 10px;
   border: none;
+}
+
+.FormDatos {
+  width: 80%;
+  padding: 150px 30px 30px 30px;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  top: -130px;
+  z-index: 1;
+  background-color: #efefef;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.3s ease-out;
+}
+.FormDatos label {
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+  color: grey;
+}
+.FormDatos input, .FormDatos select, .FormDatos .btnPagar {
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 2px solid #ced6e0;
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+}
+.FormDatos .flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.FormDatos .flexbox .select {
+  width: 100%;
+  margin-right: 15px;
+}
+.FormDatos .flexbox .select select {
+  -webkit-appearance: none;
+}
+.FormDatos .flexbox .select i {
+  position: relative;
+  color: #CED6E0;
+  top: -38px;
+  right: -215px;
+  transition: 0.3s ease all;
+}
+.FormDatos .flexbox .select i:hover {
+  color: black;
+}
+.FormDatos .flexbox .expiracion {
+  width: 100%;
+}
+.FormDatos .flexbox .ccv {
+  min-width: 100px;
+}
+.FormDatos .btnPagar {
+  font-size: 20px;
+  font-family: "oswald", sans-serif;
+  color: black;
+  text-transform: uppercase;
+}
+
+.contenedorTarjeta {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* formulario pago */
+}
+.contenedorTarjeta .tarjeta {
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  transition: 0.3s ease all;
+  cursor: pointer;
+  z-index: 2;
+}
+.contenedorTarjeta .tarjeta .delantera {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px 0 black;
+  min-height: 345px;
+  width: 100%;
+  background: url(../img/spiderman.png);
+  background-size: cover;
+}
+.contenedorTarjeta .botonAbrirForm {
+  border-radius: 90%;
+  border: none;
+  padding: 12px;
+  background-color: #A20A0A;
+  position: relative;
+  top: -25px;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.contenedorTarjeta .botonAbrirForm i {
+  font-size: 30px;
+  color: white;
+}
+.contenedorTarjeta .FormPago {
+  width: 80%;
+  padding: 150px 30px 30px 30px;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  top: -145px;
+  z-index: 1;
+  background-color: #efefef;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.3s ease-out;
+}
+.contenedorTarjeta .FormPago label {
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+  color: grey;
+}
+.contenedorTarjeta .FormPago input, .contenedorTarjeta .FormPago select, .contenedorTarjeta .FormPago .btnPagar {
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 2px solid #ced6e0;
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+}
+.contenedorTarjeta .FormPago .flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contenedorTarjeta .FormPago .flexbox .select {
+  width: 100%;
+  margin-right: 15px;
+}
+.contenedorTarjeta .FormPago .flexbox .select select {
+  -webkit-appearance: none;
+}
+.contenedorTarjeta .FormPago .flexbox .select i {
+  position: relative;
+  color: #CED6E0;
+  top: -38px;
+  right: -215px;
+  transition: 0.3s ease all;
+}
+.contenedorTarjeta .FormPago .flexbox .select i:hover {
+  color: black;
+}
+.contenedorTarjeta .FormPago .flexbox .expiracion {
+  width: 100%;
+}
+.contenedorTarjeta .FormPago .flexbox .ccv {
+  min-width: 100px;
+}
+.contenedorTarjeta .FormPago .btnPagar {
+  font-size: 20px;
+  font-family: "oswald", sans-serif;
+  color: black;
+  text-transform: uppercase;
 }

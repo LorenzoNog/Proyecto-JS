@@ -1,4 +1,6 @@
-/* Evento formulario */
+
+/*form de contacto*/
+
 let form = document.getElementById('formulario')
 
 form.addEventListener('submit',function(e){
@@ -8,6 +10,14 @@ form.addEventListener('submit',function(e){
     
 })
 
+
+//redirigiendo al catalogo tras enviar el mensaje
+const btnEnviar = document.getElementById('input5');
+ btnEnviar.addEventListener('click',()=>{
+        setTimeout( function() {window.location.href = "http://127.0.0.1:5500/pages/catalogo.html"}, 3000 )
+    })
+
+// funcion para enviar formulario
 function enviarFormulario() {
     form.reset();
     form.lastElementChild.innerHTML = "Listo !!";
@@ -15,10 +25,11 @@ function enviarFormulario() {
         icon: 'success',
         title: 'Tu mensaje ha sido enviado con éxito!',
         showConfirmButton: false,
-        timer: 1500
+        timer: 2000
     })
 }
 
+//funcion validacion de form
 function formulario() {
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
@@ -86,6 +97,7 @@ function formulario() {
             }
         }).showToast()
     }else {
+        // si todo es correcto, enviar el formulario
         enviarFormulario();
         console.log(`nombre: ${nombre}\napellido: ${apellido}\nmail: ${correo}\nmensaje: ${mensaje}`)
     }

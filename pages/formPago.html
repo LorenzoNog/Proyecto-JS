@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@1,500&family=Oswald&family=Square+Peg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/44169911f1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">
+            La Bachizzeria
+        </h1>
+        <button id="boton-carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="contadorCarrito">
+                0
+            </span>
+        </button>
+    </header>  
+    <main>
+        <div class="contenedorTarjeta">
+            <section class="tarjeta" id="tarjetaCredito">
+                <div class="delantera">
+                </div>
+            </section>
+
+            <div class="contenedorBtn">
+                <button class="botonAbrirForm" id="botonAbrirForm">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+            <form id="FormPago" class="FormPago">
+                <div class="grupo">
+                    <label for="numero">
+                        Número tarjeta 
+                    </label>
+                    <input type="text" id="inputNumero" autocomplete="off" maxlength="19">
+                </div>
+                <div class="grupo">
+                    <label for="nombre">
+                        Nombre Titular 
+                    </label>
+                    <input type="text" id="inputNombre" autocomplete="off">
+                </div>
+                <div class="flexbox">
+                    <div class="grupo expiracion">
+                        <label for="Mes">Expira</label>
+                        <div class="flexbox">
+                            <div class="select">
+                                <select name="mes" class="mes" id="selectMes">
+                                    <option disabled selected>Mes</option>
+                                </select>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="select">
+                                <select name="anio" class="anio" id="selectAnio">
+                                    <option disabled selected>Año</option>
+                                </select>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grupo ccv">
+                        <label for="inputCCV">
+                            CCV
+                        </label>
+                        <input type="text" class="ccv" id="inputCCV" maxlength="3">
+                    </div>
+                </div>
+                <div class="grupo">
+                    <label for="numero">
+                        Email
+                    </label>
+                    <input type="text" id="inputEmail" autocomplete="off" maxlength="30">
+                </div>
+                <div class="grupo">
+                    <label for="numero">
+                        Teléfono
+                    </label>
+                    <input type="text" id="inputTelefono" autocomplete="off" maxlength="10">
+                </div>
+                <div class="grupo">
+                    <label for="numero">
+                        Dirección de envío
+                    </label>
+                    <input type="text" id="inputDireccion" autocomplete="off">
+                </div>
+                <button type="submit" class="btnPagar" id="botonPagar">
+                    Pagar
+                </button>
+            </form>
+        </div>
+    </main>
+    <script src="../js/formPago.js"></script>
+    <script src="../js/efectos.js"></script>
+    <script src="../js/gestor.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

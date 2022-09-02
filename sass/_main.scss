@@ -20,7 +20,8 @@ body {
     margin-right: 5px;
     padding-top: 10px;
 }
-.boton-agregar {
+.boton-agregar, .boton-pagar{
+    text-transform: uppercase;
     background:transparent;
     color: tomato;
     font-size: 18px;
@@ -28,6 +29,9 @@ body {
     &:hover{
         color: black;
     }
+}
+.boton-pagar{
+    margin-left: 55%;
 }
 .modal-contenedor {
     position: fixed;
