@@ -92,11 +92,13 @@ header h1 {
 }
 header #boton-carrito {
   border: none;
-  color: #F6EEC9;
+  color: black;
   font-size: 30px;
   background: transparent;
   padding: 10px 20px;
   transition: all 0.3s;
+  position: fixed;
+  margin-left: 85%;
 }
 header #boton-carrito:hover {
   cursor: pointer;
@@ -209,7 +211,6 @@ body {
   font-size: 20px;
 }
 
-/*  */
 /* page 1 */
 main {
   overflow-x: hidden;
@@ -242,7 +243,6 @@ main {
   margin-left: 45%;
 }
 
-/*  */
 .containerFondo {
   background-image: url(../img/background1.png);
   height: 110vh;
@@ -449,7 +449,6 @@ footer .containerFooter i:hover {
   border-radius: 90%;
   border: none;
   padding: 12px;
-  background-color: #A20A0A;
   position: relative;
   top: -25px;
   z-index: 3;
@@ -458,7 +457,7 @@ footer .containerFooter i:hover {
 }
 .contenedorTarjeta .botonAbrirForm i {
   font-size: 30px;
-  color: white;
+  color: tomato;
 }
 .contenedorTarjeta .FormPago {
   width: 80%;

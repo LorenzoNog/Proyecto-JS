@@ -16,11 +16,13 @@ header {
     }
     #boton-carrito {
         border: none;
-        color:$color3;
+        color:black;
         font-size: 30px;
         background: transparent;
         padding: 10px 20px;
         transition: all .3s;
+        position: fixed;
+        margin-left: 85%;
         &:hover {
         cursor: pointer;
         color: black;
