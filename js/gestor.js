@@ -58,11 +58,6 @@ botonVaciar.addEventListener('click', () => {
     actualizarCarrito()
 })
 
-//boton para redirigir a la pestana de pago
-botonIrAPagar.addEventListener('click',()=>{
-    setTimeout( function() {window.location.href = "http://127.0.0.1:5500/pages/formPago.html"}, 2000 )
-})
-
 //funcion para mostrar productos
 function CargarProductos(productos){
 
