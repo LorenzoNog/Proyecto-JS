@@ -3,8 +3,12 @@
 
 Segundo trabajo que realicé en este camino, este fue el proyecto final que realicé para el curso de Javascript😁👍
 
+🍕 ##Autor
 
-##🍕 De que se trata?
+- [@LorenzoNog](https://www.github.com/LorenzoNog)
+
+
+🍕 ##De que se trata?
 
 Es una simulación de página web para una pizzería.
 Cuenta con:
@@ -15,12 +19,7 @@ Cuenta con:
 - Medio de pago.
 
 
-##🍕 Autor
-
-- [@LorenzoNog](https://www.github.com/LorenzoNog)
-
-
-##🍕 Se utiliza en el:
+🍕 ##Se utiliza en el:
 
 - HTML
 - CSS
@@ -29,6 +28,6 @@ Cuenta con:
 - JSON
 
 
-##🍕 Depliegue
+🍕 ##Depliegue
 
 Puede acceder a la página simplemente dirigiéndose al siguiente https://lorenzonog.github.io/Proyecto-JS/
